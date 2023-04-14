@@ -1,0 +1,25 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+
+
+
+#form1Example3{
+          position: relative;
+          margin-left: -15px;
+}
+
+
+<div class="d-flex flex-row align-items-center mb-4">
+                    <h2><i class="bi bi-envelope-at-fill me-3"></i></h2>
+                  <div class="form-outline flex-fill mb-0">
+                    <input type="email" id="form3Example3c" class="form-control" placeholder="Email"/>
+                  </div>
+                </div>
+      
+      
+      
+                <div class="d-flex flex-row align-items-center mb-4">
+                  <h2><i class="bi bi-lock-fill me-3"></i></h2>
+                <div class="form-outline flex-fill mb-0">
+                  <input type="password" id="form3Example4c" class="form-control" placeholder="Password"/>
+                </div>
+              </div>
