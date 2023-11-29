@@ -30,40 +30,52 @@
 
 <form id="genreForm">
     <label>
-        <input type="checkbox" name="action"> Action
+        <input type="checkbox" name="Action"> Action
     </label>
     <label>
-        <input type="checkbox" name="adventure"> Adventure
+        <input type="checkbox" name="Adventure"> Adventure
     </label>
     <label>
-        <input type="checkbox" name="comedy"> Comedy
+        <input type="checkbox" name="Comedy"> Comedy
     </label>
     <label>
-        <input type="checkbox" name="drama"> Drama
+        <input type="checkbox" name="Drama"> Drama
     </label>
     <label>
-        <input type="checkbox" name="fantasy"> Fantasy
+        <input type="checkbox" name="Fantasy"> Fantasy
     </label>
     <label>
-        <input type="checkbox" name="sci-fi"> Sci-Fi
+        <input type="checkbox" name="Sci-Fi"> Sci-Fi
     </label>
     <label>
-        <input type="checkbox" name="slice-of-life"> Slice of Life
+        <input type="checkbox" name="Horror"> Horror
     </label>
     <label>
-        <input type="checkbox" name="horror"> Horror
+        <input type="checkbox" name="Romance"> Romance
     </label>
     <label>
-        <input type="checkbox" name="romance"> Romance
+        <input type="checkbox" name="Mystery"> Mystery
     </label>
     <label>
-        <input type="checkbox" name="mystery"> Mystery
-    </label>
-    <label>
-        <input type="checkbox" name="supernatural"> Supernatural
+        <input type="checkbox" name="Supernatural"> Supernatural
     </label>
 
-    <button type="button">Submit</button>
+    <button type="button" onclick="getSelectedGenres()">Submit</button>
 </form>
+<script>
+    function getSelectedGenres() {
+        var form = document.getElementById("genreForm");
+        var checkboxes = form.elements;
+        var selectedGenres = [];
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].type === "checkbox" && checkboxes[i].checked) {
+                selectedGenres.push(checkboxes[i].name);
+            }
+        }
+
+        alert("Selected Genres: " + selectedGenres.join(", "));
+    }
+</script>
 </body>
 </html>
