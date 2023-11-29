@@ -8,11 +8,19 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-
         label {
             display: block;
             margin-bottom: 10px;
+        }
+        form{
+            border: 2px solid black;
+            padding: 20px 50px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -55,24 +63,7 @@
         <input type="checkbox" name="supernatural"> Supernatural
     </label>
 
-    <button type="button" onclick="getSelectedGenres()">Submit</button>
+    <button type="button">Submit</button>
 </form>
-
-<script>
-    function getSelectedGenres() {
-        var form = document.getElementById("genreForm");
-        var checkboxes = form.elements;
-        var selectedGenres = [];
-
-        for (var i = 0; i < checkboxes.length; i++) {
-            if (checkboxes[i].type === "checkbox" && checkboxes[i].checked) {
-                selectedGenres.push(checkboxes[i].name);
-            }
-        }
-
-        alert("Selected Genres: " + selectedGenres.join(", "));
-    }
-</script>
-
 </body>
 </html>
