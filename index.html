@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Genres</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Anime Genres</h2>
+
+<form id="genreForm">
+    <label>
+        <input type="checkbox" name="action"> Action
+    </label>
+    <label>
+        <input type="checkbox" name="adventure"> Adventure
+    </label>
+    <label>
+        <input type="checkbox" name="comedy"> Comedy
+    </label>
+    <label>
+        <input type="checkbox" name="drama"> Drama
+    </label>
+    <label>
+        <input type="checkbox" name="fantasy"> Fantasy
+    </label>
+    <label>
+        <input type="checkbox" name="sci-fi"> Sci-Fi
+    </label>
+    <label>
+        <input type="checkbox" name="slice-of-life"> Slice of Life
+    </label>
+    <label>
+        <input type="checkbox" name="horror"> Horror
+    </label>
+    <label>
+        <input type="checkbox" name="romance"> Romance
+    </label>
+    <label>
+        <input type="checkbox" name="mystery"> Mystery
+    </label>
+    <label>
+        <input type="checkbox" name="supernatural"> Supernatural
+    </label>
+
+    <button type="button" onclick="getSelectedGenres()">Submit</button>
+</form>
+
+<script>
+    function getSelectedGenres() {
+        var form = document.getElementById("genreForm");
+        var checkboxes = form.elements;
+        var selectedGenres = [];
+
+        for (var i = 0; i < checkboxes.length; i++) {
+            if (checkboxes[i].type === "checkbox" && checkboxes[i].checked) {
+                selectedGenres.push(checkboxes[i].name);
+            }
+        }
+
+        alert("Selected Genres: " + selectedGenres.join(", "));
+    }
+</script>
+
+</body>
+</html>
